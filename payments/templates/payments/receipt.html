@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Receipt</title></head><body style='font-family:sans-serif;padding:20px;'>
+
+<h2>Payment Receipt</h2>
+<p><strong>Student:</strong> {{ payment.student }} ({{ payment.student.student_id }})</p>
+<p><strong>Type:</strong> {{ payment.payment_type }}</p>
+<p><strong>Amount:</strong> ₹{{ payment.amount }}</p>
+<p><strong>Method:</strong> {{ payment.method }}</p>
+<p><strong>Status:</strong> {{ payment.status }}</p>
+<p><strong>Date:</strong> {{ payment.payment_date }}</p>
+<p><strong>Reference:</strong> {{ payment.reference_id }}</p>
+</body></html>
