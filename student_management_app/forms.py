@@ -13,7 +13,7 @@ class AddStudentForm(forms.Form):
     username=forms.CharField(label="Username",max_length=50,widget=forms.TextInput(attrs={"class":"form-control"}))
     address=forms.CharField(label="Address",max_length=50,widget=forms.TextInput(attrs={"class":"form-control"}))
 
-    courses=Courses.objects.all()
+    #courses=Courses.objects.all()
     course_list=[]
     for course in courses:
         small_course=(course.id,course.course_name)
