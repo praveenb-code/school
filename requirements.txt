@@ -4,3 +4,4 @@ whitenoise
 python-dotenv
 psycopg2-binary
 requests
+mysqlclient>=2.2.0
