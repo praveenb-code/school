@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'student_management_system.wsgi.application'
+WSGI_APPLICATION = 'gunicorn student_management_system.wsgi:application'
 
 
 # Database
