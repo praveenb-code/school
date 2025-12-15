@@ -13,11 +13,14 @@ class AddStudentForm(forms.Form):
     username=forms.CharField(label="Username",max_length=50,widget=forms.TextInput(attrs={"class":"form-control"}))
     address=forms.CharField(label="Address",max_length=50,widget=forms.TextInput(attrs={"class":"form-control"}))
 
-    #courses=Courses.objects.all()
+    try:
+    courses=Courses.objects.all()
     course_list=[]
-    for course in courses:
-        small_course=(course.id,course.course_name)
-        course_list.append(small_course)
+        for course in courses:
+            small_course=(course.id,course.course_name)
+            course_list.append(small_course)
+    except:
+        course_list = []
 
     gender_choice=(
         ("Male","Male"),
