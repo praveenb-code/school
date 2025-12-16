@@ -14,8 +14,8 @@ class AddStudentForm(forms.Form):
     address=forms.CharField(label="Address",max_length=50,widget=forms.TextInput(attrs={"class":"form-control"}))
 
     try:
-    courses=Courses.objects.all()
-    course_list=[]
+        courses=Courses.objects.all()
+        course_list=[]
         for course in courses:
             small_course=(course.id,course.course_name)
             course_list.append(small_course)
